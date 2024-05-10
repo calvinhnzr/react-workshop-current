@@ -1,8 +1,8 @@
 const Header = () => {
   return (
-    <header class="main-header">
-      <nav class="main-navigation">
-        <a href="/" class="logo">
+    <header className="main-header">
+      <nav className="main-navigation">
+        <a href="/" className="logo">
           <h1>
             <img
               src="./assets/images/projectsurvival-logo.svg"
@@ -11,8 +11,8 @@ const Header = () => {
           </h1>
         </a>
 
-        <div class="is-hidden">
-          <form class="keyword-search for-large-viewports">
+        <div className="is-hidden">
+          <form className="keyword-search for-large-viewports">
             <input
               type="search"
               id="search"
@@ -20,14 +20,14 @@ const Header = () => {
               placeholder="Suchen"
             />
             <button type="submit">
-              <span class="icon icon--l">search</span>
+              <span className="icon icon--l">search</span>
             </button>
           </form>
         </div>
 
-        <div class="main-menu-trigger hambuger-menu">
+        <div className="main-menu-trigger hambuger-menu">
           <input type="checkbox" id="hambuger-manu-checkbox" />
-          <label for="hambuger-manu-checkbox">
+          <label htmlFor="hambuger-manu-checkbox">
             <span></span>
             <span></span>
 

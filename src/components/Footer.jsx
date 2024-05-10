@@ -1,4 +1,4 @@
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer class="main-footer">
       <h2>Barrierefreiheit</h2>
@@ -23,4 +23,3 @@ const Footer = () => {
     </footer>
   )
 }
-export default Footer
