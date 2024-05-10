@@ -1,9 +1,6 @@
 import { useEffect } from "react"
 
 const Card = (props) => {
-  useEffect(() => {
-    console.log(props.item)
-  }, [])
   return (
     <li>
       <figure>
@@ -15,8 +12,9 @@ const Card = (props) => {
           <h3>{props.item.title}</h3>
           <address>{props.item.author}</address>
           <ul className="tag-list">
-            <li>Tag1</li>
-            <li>Tag2</li>
+            {props.item.tags.keywords.map((tag) => {
+              return <li>{tag}</li>
+            })}
           </ul>
         </figcaption>
       </figure>
