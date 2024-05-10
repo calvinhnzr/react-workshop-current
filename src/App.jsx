@@ -8,7 +8,6 @@ import Card from "./components/Card"
 import { fetchData } from "./helpers/fetchData"
 
 const App = () => {
-  const [boolean, setBoolean] = useState(false)
   const [dataState, setDataState] = useState(0)
 
   const url =
@@ -19,6 +18,7 @@ const App = () => {
       setDataState(data)
     })
   }, [])
+
   return (
     <div>
       <Header />
