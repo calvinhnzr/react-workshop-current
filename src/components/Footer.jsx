@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer class="main-footer">
+    <footer className="main-footer">
       <h2>Barrierefreiheit</h2>
       <ul>
         <li>leichte Sprache</li>
