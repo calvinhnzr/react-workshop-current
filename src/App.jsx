@@ -5,12 +5,18 @@ import { Footer } from "./components/Footer"
 import Button from "./components/Button"
 import Card from "./components/Card"
 
+import { fetchData } from "./helpers/fetchData"
+
 const App = () => {
   const [boolean, setBoolean] = useState(false)
+  const url =
+    "https://gist.githubusercontent.com/vschaefer/8d26be957bbc8607f60da5dd1b251a78/raw/38c62965139a156d4a605be1e046ad8278235fff/articles.json"
 
-  function handleClick() {
-    setBoolean(!boolean)
-  }
+  useEffect(() => {
+    fetchData(url).then((data) => {
+      console.log(data)
+    })
+  }, [])
 
   return (
     <div>
@@ -19,13 +25,9 @@ const App = () => {
         <section>
           <ul className="card-grid" id="article-container">
             <Card />
-            <Card />
           </ul>
         </section>
-
-        <Button handleClick={handleClick} />
       </Main>
-
       <Footer />
     </div>
   )

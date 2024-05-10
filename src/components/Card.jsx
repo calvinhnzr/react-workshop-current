@@ -2,11 +2,11 @@ const Card = () => {
   return (
     <li>
       <figure>
-        <img src="./assets/images/teaser.jpg" alt="alt" />
+        <img src="./assets/images/teaser.jpg" alt="" />
         <figcaption>
           <h3>Title</h3>
           <address>Author</address>
-          <ul class="tag-list">
+          <ul className="tag-list">
             <li>Tag1</li>
             <li>Tag2</li>
           </ul>
