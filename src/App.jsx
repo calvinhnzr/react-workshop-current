@@ -3,34 +3,10 @@ import { useState, useEffect } from "react"
 import Header from "./components/Header"
 import { Footer } from "./components/Footer"
 import Button from "./components/Button"
-
-const Main = (props) => {
-  useEffect(() => {
-    console.log("Component mounted")
-
-    return () => {
-      console.log("Component unmounted")
-    }
-  }, [])
-
-  return (
-    <main>
-      <h1>{props.title}</h1>
-      {props.children}
-    </main>
-  )
-}
+import Card from "./components/Card"
 
 const App = () => {
   const [boolean, setBoolean] = useState(false)
-
-  // useEffect(() => {
-  //   console.log("Component mounted")
-  //   //
-  //   return () => {
-  //     // cleanup
-  //   }
-  // }, [])
 
   function handleClick() {
     setBoolean(!boolean)
@@ -39,12 +15,23 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Button handleClick={handleClick} />
+      <Main>
+        <section>
+          <ul className="card-grid" id="article-container">
+            <Card />
+            <Card />
+          </ul>
+        </section>
 
-      {boolean ? <Main title="Hello World!" color="blue" /> : ""}
+        <Button handleClick={handleClick} />
+      </Main>
 
       <Footer />
     </div>
   )
 }
 export default App
+
+const Main = (props) => {
+  return <main>{props.children}</main>
+}
