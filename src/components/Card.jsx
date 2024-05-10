@@ -1,4 +1,9 @@
-const Card = () => {
+import { useEffect } from "react"
+
+const Card = (props) => {
+  useEffect(() => {
+    console.log(props.item)
+  }, [])
   return (
     <li>
       <figure>
